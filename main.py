@@ -40,6 +40,11 @@ def main():
                 print("Game over!")
                 sys.exit(0)
             
+            for shot in shots:
+                if object.is_colliding(shot):
+                    object.kill()
+                    shot.kill()
+            
         for object in drawable:
             object.draw(screen)
             
